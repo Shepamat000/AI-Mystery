@@ -2,7 +2,7 @@ from openai import OpenAI
 
 knifeVar = False
 
-apiKeyVar="???"
+apiKeyVar  = input("Please enter a valid OpenAI API Key:\n")
 
 def crime_scene(): 
     global knifeVar
@@ -70,17 +70,17 @@ def Smith(apiKey):
         message = input("User : ")
         if (message == "Exit"):
             smithLoop = False
-        if smithLoop: 
-            if message:
-                messages.append(
-                    {"role": "user", "content": message},
-                )
-                chat = client.chat.completions.create(
-                    model=MODEL, messages=messages
-                )
-            reply = chat.choices[0].message.content
-            print(f"Bill Smith: {reply}")
-            messages.append({"role": "assistant", "content": reply})
+            break
+        if message:
+            messages.append(
+                {"role": "user", "content": message},
+            )
+            chat = client.chat.completions.create(
+                model=MODEL, messages=messages
+            )
+        reply = chat.choices[0].message.content
+        print(f"Bill Smith: {reply}")
+        messages.append({"role": "assistant", "content": reply})
 
 def Butcher(apiKey):
     print ("\nYou find Butcher at his farm, feeding animals.  He smiles warmly at you as you approach.  Use 'Exit' at any time to return to the options \n")
@@ -123,23 +123,23 @@ def Butcher(apiKey):
 
     reply = chat.choices[0].message.content
     print(f"John Butcher: {reply}")
-    smithLoop = True
+    butcherLoop = True
 
-    while smithLoop:
+    while butcherLoop:
         message = input("User : ")
         if (message == "Exit"):
-            smithLoop = False
-        if smithLoop: 
-            if message:
-                messages.append(
-                    {"role": "user", "content": message},
-                )
-                chat = client.chat.completions.create(
-                    model=MODEL, messages=messages
-                )
-            reply = chat.choices[0].message.content
-            print(f"John Butcher:: {reply}")
-            messages.append({"role": "assistant", "content": reply})
+            butcherLoop = False
+            break
+        if message:
+            messages.append(
+                {"role": "user", "content": message},
+            )
+            chat = client.chat.completions.create(
+                model=MODEL, messages=messages
+            )
+        reply = chat.choices[0].message.content
+        print(f"John Butcher:: {reply}")
+        messages.append({"role": "assistant", "content": reply})
 
             
 def McDonald(apiKey):
@@ -186,19 +186,19 @@ def McDonald(apiKey):
         message = input("User : ")
         if (message == "Exit"):
             sarahLoop = False
-        if sarahLoop: 
-            if message:
-                messages.append(
-                    {"role": "user", "content": message},
-                )
-                chat = client.chat.completions.create(
-                    model=MODEL, messages=messages
-                )
-            reply = chat.choices[0].message.content
-            print(f"Sarah McDonald: {reply}")
-            messages.append({"role": "assistant", "content": reply})
+            break
+        if message:
+            messages.append(
+                {"role": "user", "content": message},
+            )
+            chat = client.chat.completions.create(
+                model=MODEL, messages=messages
+            )
+        reply = chat.choices[0].message.content
+        print(f"Sarah McDonald: {reply}")
+        messages.append({"role": "assistant", "content": reply})
 
-  
+
 def Stanford(apiKey):
     print ("\nYou find Stanford walking the streets.  She runs up to you, peppy and outgoing \n")
     MODEL = "gpt-4o-mini"
@@ -224,7 +224,7 @@ def Stanford(apiKey):
                 prompt} ]
 
     messages.append(
-                {"role": "user", "content": "Good evening sir."},
+                {"role": "user", "content": "Good evening ma'am."},
     )
 
     chat = client.chat.completions.create(
@@ -233,23 +233,23 @@ def Stanford(apiKey):
 
     reply = chat.choices[0].message.content
     print(f"Rebecca Stanford: {reply}")
-    sarahLoop = True
+    beccaLoop = True
 
-    while sarahLoop:
+    while beccaLoop:
         message = input("User : ")
         if (message == "Exit"):
-            sarahLoop = False
-        if sarahLoop: 
-            if message:
-                messages.append(
-                    {"role": "user", "content": message},
-                )
-                chat = client.chat.completions.create(
-                    model=MODEL, messages=messages
-                )
-            reply = chat.choices[0].message.content
-            print(f"Rebecca Stanford: {reply}")
-            messages.append({"role": "assistant", "content": reply})
+            beccaLoop = False
+            break
+        if message:
+            messages.append(
+                {"role": "user", "content": message},
+            )
+            chat = client.chat.completions.create(
+                model=MODEL, messages=messages
+            )
+        reply = chat.choices[0].message.content
+        print(f"Rebecca Stanford: {reply}")
+        messages.append({"role": "assistant", "content": reply})
 
 def Solve():
     solveLoop = True

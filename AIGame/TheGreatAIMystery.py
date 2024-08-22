@@ -10,7 +10,7 @@ print(Intro)
 input("Press enter to continue")
 
 Intro2 = """ \nThere are 4 main suspects in the case.  Bill Smith, an introverted, frail, grumpy old carpenter who lived down the street from where the murder took place.
-John Butcher, an honest farmer with a solid build who moved in from Kansas just a year ago, but was known to have disputes with the neighbor
+John Butcher, an honest young farmer with a solid build who moved in from Kansas just a year ago, but was known to have disputes with Alfred McDonald
 Sarah McDonald, The widow of the murdered suspect.  A quiet, introverted chemist, she has seemed mysterious even to 
 McDonald himself at times
 and Rebecca Stanford, a mysterious wild card whose career was unknown.  She was bold and outgoing, yet a mysterious figure all the same\n"""
