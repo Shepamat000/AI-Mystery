@@ -232,7 +232,7 @@ def Stanford(apiKey):
     )
 
     reply = chat.choices[0].message.content
-    print(f"Sarah McDonald: {reply}")
+    print(f"Rebecca Stanford: {reply}")
     sarahLoop = True
 
     while sarahLoop:
@@ -248,7 +248,7 @@ def Stanford(apiKey):
                     model=MODEL, messages=messages
                 )
             reply = chat.choices[0].message.content
-            print(f"Sarah McDonald: {reply}")
+            print(f"Rebecca Stanford: {reply}")
             messages.append({"role": "assistant", "content": reply})
 
 def Solve():
